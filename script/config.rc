@@ -1,0 +1,10 @@
+# Plik konfiguracyjny dla skryptu media_organizer.sh
+
+#Zmienna przechowująca nazwę obecnego użytkownika
+user=$(whoami)
+
+# Katalog docelowy dla folderów audio, video, images oraz całego folderu z posortowwanymi multimediami
+audio_dir="/home/$user/Documents/tmp/audio"
+video_dir="/home/$user/Documents/tmp/video"
+images_dir="/home/$user/Documents/tmp/images"
+media_dir="/home/$user/Documents/tmp"

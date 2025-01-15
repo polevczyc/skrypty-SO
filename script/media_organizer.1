@@ -1,0 +1,51 @@
+.TH MEDIA_ORGANIZER 1 "14 czerwca 2023" "1.0" "media_organizer.sh manual"
+.SH NAZWA
+media_organizer \- Organizacja i otwieranie multimediów
+.SH SYNOPSIS
+.B media_organizer.sh
+[\fIOPCJE\fR]
+.SH OPIS
+\fImedia_organizer.sh\fR to skrypt Bash, który przeszukuje pliki z multimediami w bieżącym katalogu i przenosi je do odpowiednich folderów. Skrypt umożliwia również otwarcie wybranego pliku multimedialnego za pomocą programu odpowiedniego dla danego typu pliku.
+.SH OPCJE
+.TP
+.B \-v
+Wyświetla informacje o wersji skryptu i autorze.
+.TP
+.B \-h
+Wyświetla pomoc dotyczącą użycia skryptu.
+.SH PRZYKŁADY UŻYCIA
+.B media_organizer.sh
+Uruchamia skrypt w trybie domyślnym, przeszukując pliki multimedialne i przenosząc je do odpowiednich folderów.
+.PP
+.B media_organizer.sh \-v
+Wyświetla informacje o wersji skryptu i autorze.
+.PP
+.B media_organizer.sh \-h
+Wyświetla pomoc dotyczącą użycia skryptu.
+.SH OPIS DZIAŁANIA
+Skrypt wczytuje dane konfiguracyjne z pliku config.rc. Są tam zawarte ścieżki do folderów, które w następnych etapach będą tworzone dla potrzeb programu. Foldery te są przechowywane w folderze z plikami tymczasowymi /tmp. Skrypt pozwala na wyświetlenie wersji oraz autora za pomocą opcji -v, oraz wyświetlenie pomocy odnośnie programu za pomocą opcji -h. Zawiera funkcje odpowiadające za wyszukiwanie plików z multimediami, sortowanie znalezionych plików do odpowiednich folderów oraz rozdzielanie ich względem ich rozszerzeń, otwieranie programu zenity w celu wyboru pliku który chcemy otworzyć oraz sprawdzanie czy wspomniany program zenity jest zainstalowany. 
+.SH ZALEŻNOŚCI
+Skrypt wymaga obecności programu Zenity do wyboru plików, programu VLC do wyświetlania plików wideo i muzyki oraz programu Image Viewer do wyświetlania zdjęć.
+.SH FUNKCJE
+.TP
+\fBrm_tmp_dir()\fR
+Funkcja usuwająca katalog tymczasowy przy zakończeniu skryptu.
+.TP
+\fBprint_help()\fR
+Funkcja wyświetlająca krótką pomoc dotyczącą użycia skryptu.
+.TP
+\fBprint_version()\fR
+Funkcja wyświetlająca informacje o wersji skryptu i autorze.
+.TP
+\fBorganize_files()\fR
+Funkcja przenosząca pliki multimedialne do odpowiednich folderów.
+.TP
+\fBopen_zenity()\fR
+Funkcja wywołująca program Zenity do wyboru pliku multimedialnego do otwarcia.
+.TP
+\fBopen_file()\fR
+Funkcja uruchamiająca program właściwy dla danego pliku multimedialnego.
+.SH AUTOR
+Jakub Polewczyk | 192562 | s192562@student.pg.edu.pl
+.SH LICENCJA
+Ten skrypt jest udostępniany na licencji GNU GPLv2.
