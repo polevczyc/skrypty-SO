@@ -1,3 +1,5 @@
+# PROJEKT: SYSTEMY OPERACYJNE
+
 **Skrypty .sh wykonujące proste operacje na plikach i danych.**
  
  ### Skrypt 1
