@@ -1,4 +1,6 @@
-﻿### Skrypt 1
+**Skrypty .sh wykonujące proste operacje na plikach i danych.**
+ 
+ ### Skrypt 1
 wykorzsytanie instrukcji takich jak: 
 ```grep```, ```sort```, ```sed```
 ### Skrypt 2
